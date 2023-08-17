@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <title>PW-4000 Engine</title>
+</head>
+
+<body>
+
+  <section>
+    <div class="tire">
+
+      <h2>
+        <span style="color:rgba(77,20,140,1)">Tech</span><span style="color:rgba(255,102,0,1)">Ops</span>
+        Training
+        <br>
+        PW-4000 Engine <br>
+        Rub Strip Calculator
+      </h2>
+      <div class="btns-logo">
+        <button class="reset" name="button" onclick="reset();">
+          <img src="images/reset.png" alt="">
+        </button>
+        <a onclick="popup1()" class="info-btn ">
+          <img src="images/question-mark.png" alt="">
+        </a>
+        <span class="popuptext" id="myPopup"><a
+            href="https://training.techops.fedex.com/resources/video/other/How_To_Use_The_PW4000_Rub_Strip_Calculator.mp4"
+            target="blank">How To Use The PW4000 Rub Strip Calculator</a>
+          <a id="popupopen"> Click Here For AMM References</a></span>
+        <img class="logo" src="images/FedEx.svg" alt="">
+      </div>
+
+      <img id="engine-img" src="images/engine-c.png" alt="">
+      <div class="refrence">
+        <span>
+          For Reference Only
+        </span>
+      </div>
+      <div class="inputs" id="p1">
+        <label for="">Position 1 :</label>
+        <input class="position_data" type="number" name="" id="inp1">
+      </div>
+      <div class="inputs" id="p2">
+        <label for="">Position 2 :</label>
+        <input class="position_data" type="number" name="" id="inp2">
+      </div>
+      <div class="inputs" id="p3">
+        <label for="">Position 3 :</label>
+        <input class="position_data" type="number" name="" id="inp3">
+      </div>
+      <div class="inputs" id="p4">
+        <label for="">Position 4 :</label>
+        <input class="position_data" type="number" name="" id="inp4">
+      </div>
+      <div class="inputs" id="p5">
+        <label for="">Position 5 :</label>
+        <input class="position_data" type="number" name="" id="inp5">
+      </div>
+      <div class="inputs" id="p6">
+        <label for="">Position 6 :</label>
+        <input class="position_data" type="number" name="" id="inp6">
+      </div>
+      <div class="inputs" id="p7">
+        <label for="">Position 7 :</label>
+        <input class="position_data" type="number" name="" id="inp7">
+      </div>
+      <div class="inputs" id="p8">
+        <label for="">Position 8 :</label>
+        <input class="position_data" type="number" name="" id="inp8">
+      </div>
+
+      <div class="lines" id="line1"></div>
+      <div class="lines" id="line2"></div>
+      <div class="lines" id="line3"></div>
+      <div class="lines" id="line4"></div>
+      <div class="lines" id="line5"></div>
+      <div class="lines" id="line6"></div>
+      <div class="lines" id="line7"></div>
+      <div class="lines" id="line8"></div>
+      <div class="seeFormula">
+        <span id="popupopen2">Click Here To <br> See Formula</span>
+      </div>
+      <div class="output">
+        <div class="">
+          <h1 class="groups" id="groupA"> <b> Group A:</b> <span></span> </h1>
+          <h1 class="groups" id="groupB"><b> Group B:</b> <span></span> </h1>
+          <h1 class="groups" id="groupC"><b> Group C:</b> <span></span> </h1>
+          <h1 class="groups" id="groupD"><b> Group D: </b><span></span> </h1>
+          <h1 class="groups" id="groupE"><b> Group E:</b> <span></span> </h1>
+          <h1 class="groups" id="groupF"><b> Group F:</b> <span></span> </h1>
+        </div>
+
+      </div>
+
+
+    </div>
+    <!-- <div class="output">
+      <div class="">
+        <h1 class="groups" id="groupA"> <b> Group A:</b> <span></span> </h1>
+        <h1 class="groups" id="groupB"><b> Group B:</b> <span></span> </h1>
+        <h1 class="groups" id="groupC"><b> Group C:</b> <span></span> </h1>
+        <h1 class="groups" id="groupD"><b> Group D: </b><span></span> </h1>
+        <h1 class="groups" id="groupE"><b> Group E:</b> <span></span> </h1>
+        <h1 class="groups" id="groupF"><b> Group F:</b> <span></span> </h1>
+      </div>
+
+    </div> -->
+
+  </section>
+  <div class="popupbox" id="popup">
+    <div class="popup">
+      <img id="close" src="images/close.png" alt="">
+      <div class="tagremove">
+        PW4000 Rub Strip Calculator, This job aid is for use on FedEx A300-600 and MD-11 aircraft with PW4158 or PW4462 engines. <br>
+        See A300-600 AMM 72-23-01-06 or MD-11 AMM 72-32-02-6-2 for further guidance.
+      </div>
+    </div>
+  </div>
+  <div class="popupbox" id="popup2">
+    <div class="popup">
+      <span class="seeexample">Click Here To See Example</span>
+      <div class="example">
+    <img id="close3" src="images/close.png" alt="" >
+
+        <ul>
+          <li class="tagremove">
+            <span class="count">
+
+            </span>
+            <p>
+              <span style="color: orangered;">
+                Reference:
+              </span>
+              A300-600 AMM 72-23-01-06 <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MD11 AMM
+              72-32-02-6-2
+            </p>
+          </li>
+
+          <li>
+            <span class="count">
+              (c)
+            </span>
+            <p>
+              Calculate the average of the readings for the three positions that are in Group A. Do the same for three
+              positions that are in each of the other groups (B through F). The average for each group must not be less
+              than 0.140 in. (3.556 mm).</p>
+          </li>
+          <li>
+            <span class="count">
+
+            </span>
+            <p>
+              Example: Group A = \[\left[\frac{P7 + P1 + P8}{3} \right]\]
+            </p>
+          </li>
+        </ul>
+      </div>
+      <img id="close2" src="images/close.png" alt="">
+      <div>
+        <ul class="formula-ul">
+
+          <li>
+            <p>
+              <!-- (Position B + Position C / 2) - (Position U + Positon V / 2)  -->
+              Group A = \[\left[\frac{P7 + P1 + P8}{3} \right]\] =
+            <p id="ga">
+
+            </p>
+            </p>
+
+          </li>
+
+
+
+          <li>
+            <p>
+              <!-- (Position B + Position C / 2) - (Position U + Positon V / 2)  -->
+              Group B = \[\left[\frac{P8 + P1 + P3}{3} \right]\] =
+            <p id="gb">
+
+            </p>
+            </p>
+
+          </li>
+
+
+          <li>
+            <p>
+              <!-- (Position B + Position C / 2) - (Position U + Positon V / 2)  -->
+              Group C = \[\left[\frac{P1 + P2 + P3}{3} \right]\] =
+            <p id="gc">
+
+            </p>
+            </p>
+
+          </li>
+
+
+          <li>
+            <p>
+              <!-- (Position B + Position C / 2) - (Position U + Positon V / 2)  -->
+              Group D = \[\left[\frac{P3 + P4 + P5}{3} \right]\] =
+            <p id="gd">
+
+            </p>
+            </p>
+
+          </li>
+
+
+          <li>
+            <p>
+              <!-- (Position B + Position C / 2) - (Position U + Positon V / 2)  -->
+              Group E = \[\left[\frac{P4 + P5 + P6}{3} \right]\] =
+            <p id="ge">
+
+            </p>
+            </p>
+
+          </li>
+
+
+          <li>
+            <p>
+              <!-- (Position B + Position C / 2) - (Position U + Positon V / 2)  -->
+              Group F = \[\left[\frac{P5 + P6 + P7}{3} \right]\] =
+            <p id="gf">
+
+            </p>
+            </p>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js">
+
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#popup").hide();
+      $("#popup2").hide();
+      $("#popupopen").click(function () {
+        $("#popup").show();
+      });
+      $("#close").click(function () {
+        $("#popup").hide();
+      });
+      $("#popupopen2").click(function () {
+        $("#popup2").show();
+      });
+      $("#close2").click(function () {
+        $("#popup2").hide();
+      });
+    });
+    function popup1() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    $(".seeexample").click(function () {
+      $(".example").toggle();
+    })
+    $("#close3").click(function () {
+      $(".example").toggle();
+    })
+  </script>
+</body>
+
+</html>
